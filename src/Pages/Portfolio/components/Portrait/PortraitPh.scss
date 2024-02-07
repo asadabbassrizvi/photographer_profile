@@ -1,0 +1,22 @@
+@import "../../../../mediaquries";
+@import "../../../Home/components/Slider/slider.scss";
+
+.headingPh {
+  display: flex;
+  padding-top: 40px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-top: 1px solid var(--Dark-12, #1c1c21);
+  justify-content: space-between;
+}
+.ph_font {
+  font-size: 34px;
+
+  @include desktopScreen() {
+    font-size: 34px;
+  }
+  @include mobileScreen() {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,405 @@
+@import "../../../../mediaquries";
+.small-screen {
+  display: none !important;
+  @include mobileScreen() {
+    display: flex !important;
+    order: 2;
+  }
+}
+
+.serContainer {
+  margin-top: 150px;
+  padding: 0px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  @include desktopScreen() {
+    margin-top: 200px;
+    padding: 0 162px;
+    gap: 80px;
+  }
+  @include mobileScreen() {
+    margin-top: 80px;
+    padding: 0 16px;
+    gap: 40px;
+  }
+  .heading {
+    display: flex;
+    padding-bottom: 40px;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Dark-12, #1c1c21);
+    justify-content: space-between;
+
+    @include desktopScreen() {
+      padding-bottom: 50px;
+    }
+    @include mobileScreen() {
+      padding-bottom: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  .text {
+    span {
+      color: var(--Grey-50, #797c86);
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+
+      @include desktopScreen() {
+        font-size: 20px;
+      }
+      @include mobileScreen() {
+        font-size: 14px;
+      }
+    }
+    div {
+      color: var(--Absolute-White, #fff);
+      font-family: Manrope;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+      @include desktopScreen() {
+        font-size: 58px;
+      }
+      @include mobileScreen() {
+        font-size: 28px;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include desktopScreen() {
+      gap: 30px;
+    }
+    @include mobileScreen() {
+    }
+
+    .servicesBtn {
+      display: flex;
+      padding: 14px 20px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      border: 1px solid #2f2f37;
+      background: var(--Dark-12, #1c1c21);
+      @include desktopScreen() {
+        padding: 16px 24px;
+      }
+      @include mobileScreen() {
+        padding: 14px 20px;
+      }
+
+      img {
+        color: var(--Absolute-White, #fff);
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+        @include mobileScreen() {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .eventsContainer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+
+    @include desktopScreen() {
+      gap: 50px;
+    }
+    @include mobileScreen() {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      align-self: stretch;
+    }
+    .eventsDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      flex: 1 0 0;
+
+      @include desktopScreen() {
+        gap: 50px;
+      }
+      @include mobileScreen() {
+        gap: 30px;
+        align-self: stretch;
+        order: 2;
+      }
+
+      .slide {
+        width: 100%;
+      }
+
+      .headingCon {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+
+        @include desktopScreen() {
+          gap: 20px;
+        }
+        @include mobileScreen() {
+          gap: 12px;
+        }
+        .headingSec {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          @include desktopScreen() {
+            gap: 16px;
+          }
+          @include mobileScreen() {
+            gap: 4px;
+          }
+
+          span {
+            color: var(--Grey-50, #797c86);
+            font-family: Manrope;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            @include desktopScreen() {
+              font-size: 44px;
+            }
+            @include mobileScreen() {
+              font-size: 28px;
+            }
+          }
+          button {
+            display: flex;
+            padding: 16px 40px;
+            border: none;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100px;
+            background: var(--Purple-55, #4a2ced);
+            box-shadow: 4px 4px 17.4px 0px rgba(255, 255, 255, 0.28) inset;
+
+            @include desktopScreen() {
+              padding: 18px 50px;
+            }
+            @include mobileScreen() {
+              padding: 14px 30px;
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+              @include desktopScreen() {
+                width: 30px;
+                height: 30px;
+              }
+              @include mobileScreen() {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .headingText {
+          p {
+            color: var(--Grey-50, #797c86);
+            font-family: Manrope;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+
+            @include desktopScreen() {
+              font-size: 16px;
+            }
+            @include mobileScreen() {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .serHighlights {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      align-self: stretch;
+      @include desktopScreen() {
+        gap: 10px;
+        display: flex;
+      }
+      @include mobileScreen() {
+        gap: 8px;
+      }
+      div {
+        color: var(--Grey-80, #cacace);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        width: 100%;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+        @include mobileScreen() {
+          font-size: 14px;
+        }
+      }
+      .serProvider {
+        display: flex;
+        padding: 16px 18px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 10px;
+        border: 1px solid var(--Dark-12, #1c1c21);
+        @include desktopScreen() {
+          padding: 18px 20px;
+        }
+        @include mobileScreen() {
+          padding: 14px;
+          align-items: center;
+          gap: 4px;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          @include desktopScreen() {
+            width: 40px;
+            height: 40px;
+          }
+          @include mobileScreen() {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    .serHigh {
+      color: var(--Grey-70, #afb0b6);
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 24px */
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      @include desktopScreen() {
+        font-size: 18px;
+      }
+      @include mobileScreen() {
+        font-size: 14px;
+      }
+    }
+    .imgSContainer {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      visibility: hidden;
+
+      .imgPreview {
+        width: auto;
+        height: auto;
+        flex: 1 0 0;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          right: 0;
+          background: transparent;
+        }
+        img {
+          width: 100%;
+          transform-origin: left;
+        }
+      }
+    }
+  }
+  .btnContainer {
+    display: flex;
+    padding: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    border-radius: 100px;
+    border: 1px solid var(--Dark-12, #1c1c21);
+    background: var(--Dark-03, #070708);
+
+    @include desktopScreen() {
+      padding: 10px;
+      gap: 16px;
+    }
+    @include mobileScreen() {
+      padding: 8px;
+      gap: 12px;
+      display: none;
+    }
+
+    .arrow {
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 100px;
+      border: 1px solid #2f2f37;
+      background: var(--Dark-12, #1c1c21);
+
+      @include desktopScreen() {
+        padding: 14px;
+        gap: 10px;
+      }
+      @include mobileScreen() {
+        padding: 10px;
+        gap: 10px;
+      }
+      svg {
+        width: 28px;
+        height: 28px;
+        @include desktopScreen() {
+          width: 34px;
+          height: 34px;
+        }
+        @include mobileScreen() {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}

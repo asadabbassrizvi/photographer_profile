@@ -1,0 +1,156 @@
+@import "../../../../mediaquries";
+@import "../Services/service.scss";
+.desktop-screen {
+  @include mobileScreen() {
+    display: none !important;
+  }
+}
+.small-screen {
+  display: none !important;
+  @include mobileScreen() {
+    display: flex !important;
+    order: 2;
+  }
+}
+.carouselIndicators3 {
+  @include mobileScreen() {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.carouselContiner {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
+
+  @include desktopScreen() {
+    gap: 50px;
+  }
+
+  @include mobileScreen() {
+    gap: 40px;
+  }
+
+  .carouselItemCon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 19px;
+    flex: 1 0 0;
+
+    @include desktopScreen() {
+      gap: 19px;
+    }
+    @include mobileScreen() {
+      gap: 12px;
+    }
+    img {
+      height: 428px;
+      align-self: stretch;
+      border-radius: 16px;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 16px;
+      @include desktopScreen() {
+        height: 519px;
+        border-radius: 20px;
+      }
+      @include mobileScreen() {
+        height: auto;
+        border-radius: 16px;
+      }
+    }
+    .carouselText {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+      justify-content: space-between;
+
+      @include desktopScreen() {
+        gap: 20px;
+      }
+      @include mobileScreen() {
+        gap: 12px;
+      }
+
+      .title {
+        color: var(--Grey-80, #cacace);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        @include desktopScreen() {
+          font-size: 20px;
+        }
+        @include mobileScreen() {
+          font-size: 14px;
+        }
+      }
+      .date {
+        color: var(--Grey-50, #797c86);
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+        @include mobileScreen() {
+          font-size: 14px;
+        }
+      }
+      .viewP {
+        display: flex;
+        padding: 4px 0px;
+        align-items: flex-start;
+        gap: 6px;
+        border-bottom: 1px solid var(--Dark-20, #2f2f37);
+        @include desktopScreen() {
+          padding: 6px 0px;
+          gap: 10px;
+        }
+        @include mobileScreen() {
+          padding: 4px 0px;
+          gap: 6px;
+        }
+
+        span {
+          color: var(--Grey-95, #f2f2f3);
+          font-family: Manrope;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-transform: uppercase;
+          @include desktopScreen() {
+            font-size: 18px;
+          }
+          @include mobileScreen() {
+            font-size: 14px;
+          }
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          @include desktopScreen() {
+            width: 24px;
+            height: 24px;
+          }
+          @include mobileScreen() {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

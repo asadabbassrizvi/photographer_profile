@@ -1,0 +1,74 @@
+@import "../../mediaquries";
+
+@keyframes slide {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+
+.sliderContainer {
+  white-space: nowrap;
+  background: var(--Dark-06, #0e0e10);
+  overflow: hidden;
+  &:hover .slider {
+    animation-play-state: paused;
+  }
+
+  .slider {
+    overflow: hidden;
+    display: inline-flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-top: 1px solid var(--Dark-12, #1c1c21);
+    border-bottom: 1px solid var(--Dark-12, #1c1c21);
+    animation: 10s slide infinite linear;
+
+    @include desktopScreen() {
+      padding: 20px;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    @include mobileScreen() {
+    }
+
+    .staricImg {
+      height: 30px;
+      width: 30px;
+
+      @include desktopScreen() {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .staricText {
+      color: var(--Purple-90, #d6d0fb);
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+      text-transform: uppercase;
+      @include desktopScreen() {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    .sliderItem {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      @include desktopScreen() {
+        gap: 10;
+      }
+    }
+  }
+}

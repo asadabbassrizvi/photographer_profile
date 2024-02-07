@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+@mixin mobileScreen {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin desktopScreen {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}

@@ -1,0 +1,158 @@
+@import "../../../../mediaquries";
+
+.timeLineMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 80px 80px 0 80px;
+
+  @include mobileScreen() {
+    padding: 40px 16px 0 16px;
+  }
+  .timelineTextContainer {
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Dark-12, #1c1c21);
+
+    @include desktopScreen() {
+      gap: 4px;
+    }
+
+    @include mobileScreen() {
+      padding-bottom: 20px;
+    }
+
+    span {
+      color: var(--Grey-50, #797c86);
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+      align-self: stretch;
+
+      @include desktopScreen() {
+        font-size: 20px;
+      }
+      @include mobileScreen() {
+        font-size: 14px;
+      }
+    }
+
+    h4 {
+      color: var(--Absolute-White, #fff);
+      font-family: Manrope;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+      align-self: stretch;
+
+      @include desktopScreen() {
+        font-size: 58px;
+      }
+      @include mobileScreen() {
+        font-size: 28px;
+      }
+    }
+  }
+  .timelineCardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+
+    @include desktopScreen() {
+      gap: 30px;
+    }
+
+    @include mobileScreen() {
+      gap: 0px;
+    }
+
+    .timelineCardsMain {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      align-self: stretch;
+
+      @include desktopScreen() {
+        gap: 30px;
+      }
+      @include mobileScreen() {
+        gap: 20px;
+        display: block;
+      }
+
+      .timelineCard {
+        display: flex;
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        flex: 1 0 0;
+        border-radius: 10px;
+        border: 1px solid var(--Dark-12, #1c1c21);
+        background: var(--Dark-06, #0e0e10);
+        background-image: url("../../../Home/images/Abstract\ Design.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 212px;
+
+        @include desktopScreen() {
+          padding: 50px;
+          gap: 20px;
+        }
+
+        @include mobileScreen() {
+          padding: 24px;
+          gap: 10px;
+          height: 196px;
+          margin-bottom: 20px;
+        }
+
+        span {
+          align-self: stretch;
+          color: var(--Grey-50, #797c86);
+          font-family: Manrope;
+          font-size: 34px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+
+          @include desktopScreen() {
+            font-size: 44px;
+          }
+          @include mobileScreen() {
+            font-size: 24px;
+          }
+        }
+        p {
+          align-self: stretch;
+          color: var(--Grey-50, #797c86);
+          font-family: Manrope;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+
+          @include desktopScreen() {
+            font-size: 18px;
+          }
+          @include mobileScreen() {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../PortraitPh/PortraitPhotography.scss";
+@import "../../../mediaquries";
+
+.cstPricing {
+  color: var(--Grey-80, #cacace);
+  font-family: Manrope;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}

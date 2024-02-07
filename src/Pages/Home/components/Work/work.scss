@@ -1,0 +1,130 @@
+@import "../../../../mediaquries";
+@import "../../../../components/Banner/banner.scss";
+
+@mixin custom {
+  @media only screen and (max-width: 1030px) and (min-width: 992px) {
+    @content;
+  }
+}
+.cstPad {
+  padding: 0px 67px;
+  @include mobileScreen() {
+    padding: 0 16px;
+    position: relative;
+  }
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  position: relative;
+
+  @include desktopScreen() {
+    padding: 0px 162px;
+  }
+  @include mobileScreen() {
+  }
+
+  .img3Container {
+    position: absolute;
+    bottom: 0px;
+    left: 148px;
+
+    @include mobileScreen() {
+      bottom: -2px;
+      left: 55px;
+    }
+  }
+
+  img {
+    opacity: 0.35;
+  }
+  .img1 {
+    width: 30.5vw;
+    height: 48.25vh;
+    margin-right: 5px;
+    @include desktopScreen() {
+      width: 520px;
+      height: 354px;
+      flex-shrink: 0;
+    }
+    @include mobileScreen() {
+      width: 116.642px;
+      height: 154.184px;
+      flex-shrink: 0;
+    }
+  }
+  .img2 {
+    width: 38.35vw;
+    height: 69.9vh;
+    margin-right: 5px;
+
+    @include desktopScreen() {
+      width: 653px;
+      height: 512px;
+    }
+    @include mobileScreen() {
+      width: 146.475px;
+      height: 223px;
+    }
+  }
+  .img3 {
+    width: 33.9vw;
+    height: 48vh;
+    @include desktopScreen() {
+      width: 577px;
+      height: 354px;
+    }
+    @include mobileScreen() {
+      width: 129.427px;
+      height: 154.184px;
+    }
+  }
+  .img4 {
+    width: 22.9vw;
+    height: 40vh;
+    border-radius: 14px;
+
+    @include desktopScreen() {
+      width: 390px;
+      height: 293px;
+    }
+    @include mobileScreen() {
+      width: 87.481px;
+      height: 127.615px;
+      border-radius: 10px;
+    }
+  }
+  .img5 {
+    width: 22.85vw;
+    height: 28vh;
+    border-radius: 7px;
+
+    @include desktopScreen() {
+      width: 390px;
+      height: 205px;
+    }
+    @include mobileScreen() {
+      width: 87.481px;
+      height: 89.287px;
+      border-radius: 10px;
+    }
+  }
+  .img6 {
+    width: 9.95vw;
+    height: 19.5vh;
+    border-radius: 11px;
+
+    @include desktopScreen() {
+      width: 170px;
+      height: 143px;
+    }
+    @include mobileScreen() {
+      width: 38.133px;
+      height: 62.283px;
+      border-radius: 10px;
+    }
+  }
+}

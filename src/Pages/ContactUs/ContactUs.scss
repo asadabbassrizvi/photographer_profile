@@ -1,0 +1,510 @@
+@import "../../mediaquries";
+
+.contactMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 80px;
+  padding: 55px 12px 80px 55px;
+  @include desktopScreen() {
+    gap: 100px;
+  }
+  @include mobileScreen() {
+    gap: 60px;
+    padding: 40px 16px;
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: -574px;
+    align-self: stretch;
+    position: relative;
+    height: 632px;
+
+    @include mobileScreen() {
+      justify-content: center;
+      align-items: center;
+      gap: -24px;
+      height: auto;
+    }
+
+    .contactIconsContainer {
+      display: flex;
+      padding: 180px 500px 0px 0px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      align-self: stretch;
+      position: relative;
+
+      @include mobileScreen() {
+        gap: 24px;
+        padding: 0;
+        order: 1;
+        align-items: center;
+      }
+      @include desktopScreen() {
+        display: flex;
+        padding: 230px 500px 0px 0px;
+        gap: 24px;
+      }
+
+      .contactTextContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        align-self: stretch;
+        @include mobileScreen() {
+          order: 3;
+        }
+        @include desktopScreen() {
+          gap: 4px;
+        }
+        .contactCM {
+          align-self: stretch;
+          color: var(--Grey-50, #797c86);
+          font-family: Manrope;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+
+          @include mobileScreen() {
+            font-size: 14px;
+          }
+          @include desktopScreen() {
+            font-size: 20px;
+          }
+        }
+        h5 {
+          align-self: stretch;
+          color: var(--Absolute-White, #fff);
+          font-family: Manrope;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          @include mobileScreen() {
+            font-size: 28px;
+          }
+          @include desktopScreen() {
+            font-size: 58px;
+          }
+        }
+      }
+      p {
+        align-self: stretch;
+        color: var(--Grey-50, #797c86);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        @include mobileScreen() {
+          font-size: 14px;
+          order: 4;
+        }
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+      }
+      .contactBtnContainer {
+        display: flex;
+        padding: 8px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        right: 0px;
+        top: 75px;
+        border-radius: 100px;
+        border: 1px solid var(--Dark-12, #1c1c21);
+        background: var(--Dark-03, #070708);
+
+        @include mobileScreen() {
+          padding: 6px;
+          gap: 6px;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          order: 2;
+          top: -25px;
+        }
+
+        @include desktopScreen() {
+          padding: 10px;
+          gap: 10px;
+          position: absolute;
+          right: 0px;
+          top: 94px;
+        }
+
+        button {
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 100px;
+          border: 1px solid #2f2f37;
+          background: var(--Dark-12, #1c1c21);
+          @include mobileScreen() {
+            padding: 16px;
+            gap: 10px;
+          }
+          @include desktopScreen() {
+            padding: 24px;
+            gap: 10px;
+          }
+          svg {
+            width: 20px;
+            height: 20px;
+            @include mobileScreen() {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+      span {
+        position: absolute;
+        right: 21px;
+        bottom: -238px;
+        color: var(--Grey-50, #797c86);
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        width: 179px;
+        @include desktopScreen() {
+          width: 205px;
+          position: absolute;
+          right: 45px;
+          font-size: 18px;
+          bottom: -270px;
+        }
+        @include mobileScreen() {
+          display: none;
+        }
+      }
+    }
+    .imgCnContainer {
+      height: 632px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      visibility: hidden;
+      position: absolute;
+      @include desktopScreen() {
+        width: 783px;
+        height: 710px;
+      }
+      @include mobileScreen() {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .imgCn {
+        height: 632px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          right: 0;
+          background: transparent;
+        }
+        @include mobileScreen() {
+          width: 100%;
+          height: auto;
+        }
+        .contactBgImg {
+          height: 632px;
+          align-self: stretch;
+          position: absolute;
+          background-image: url("./images/contactUs.png");
+          width: 100%;
+          background-repeat: no-repeat;
+
+          @include mobileScreen() {
+            background-image: url("./images/contactUsSc.png");
+            background-repeat: no-repeat;
+            position: relative;
+            height: 240px;
+            order: 0;
+            background-position: center;
+          }
+          @include desktopScreen() {
+            height: 746px;
+            background-image: url("./images/contactDs.png");
+          }
+        }
+      }
+    }
+  }
+}
+.contactInformationSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 0 80px;
+  @include mobileScreen() {
+    padding: 0 16px;
+  }
+
+  .contactTextInfoMain {
+    display: flex;
+    padding: 60px 0px;
+    align-items: flex-start;
+    gap: 60px;
+    align-self: stretch;
+    border-top: 1px solid var(--Dark-12, #1c1c21);
+
+    @include mobileScreen() {
+      display: flex;
+      padding: 40px 0px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    @include desktopScreen() {
+      padding: 80px 0px;
+      gap: 80px;
+    }
+    .contactTextInfo {
+      display: flex;
+      width: 413px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      @include mobileScreen() {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        width: 100%;
+      }
+      @include desktopScreen() {
+        width: 535px;
+        gap: 30px;
+      }
+      span {
+        align-self: stretch;
+        color: var(--Grey-50, #797c86);
+        font-family: Manrope;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        @include mobileScreen() {
+          font-size: 28px;
+        }
+        @include desktopScreen() {
+          font-size: 44px;
+        }
+      }
+      p {
+        align-self: stretch;
+        color: var(--Grey-50, #797c86);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include mobileScreen() {
+          font-size: 14px;
+        }
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+      }
+    }
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      flex: 1 0 0;
+      @include mobileScreen() {
+        gap: 30px;
+      }
+
+      .cFormContainer {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        align-self: stretch;
+
+        @include mobileScreen() {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+        }
+
+        .cFormData {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 10px;
+          flex: 1 0 0;
+
+          @include mobileScreen() {
+            gap: 6px;
+          }
+          span {
+            align-self: stretch;
+            color: var(--Grey-90, #e4e4e6);
+            font-family: Manrope;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include mobileScreen() {
+              font-size: 16px;
+            }
+          }
+          input {
+            display: flex;
+            padding: 14px 0px;
+            align-items: flex-start;
+            gap: 10px;
+            align-self: stretch;
+            border-bottom: 1px solid var(--Dark-20, #2f2f37) !important;
+            flex: 1 0;
+            color: var(--Grey-40, #62646c);
+            font-family: Manrope;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            background: none;
+            border: none;
+            @include mobileScreen() {
+              font-size: 18px;
+              padding: 10px 0px;
+              gap: 10px;
+            }
+          }
+        }
+      }
+      .cMessageContainer {
+        display: flex;
+        padding-bottom: 10px;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid var(--Dark-12, #1c1c21);
+
+        @include mobileScreen() {
+          padding-bottom: 6px;
+          gap: 6px;
+        }
+        span {
+          color: var(--Absolute-White, #fff);
+          font-family: Manrope;
+          font-size: 58px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+
+          @include mobileScreen() {
+            font-size: 28px;
+          }
+        }
+        button {
+          display: flex;
+          padding: 16px 40px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 100px;
+          background: var(--Purple-55, #4a2ced);
+          box-shadow: 4px 4px 17.4px 0px;
+          border: none;
+          @include desktopScreen() {
+            padding: 18px 50px;
+          }
+          @include mobileScreen() {
+            padding: 14px 30px;
+            gap: 10px;
+          }
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+
+          @include mobileScreen() {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+  .contactBtnInfo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1 0 0;
+
+    @include mobileScreen() {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    @include desktopScreen() {
+      gap: 50px;
+    }
+    button {
+      display: flex;
+      padding: 4px 0px;
+      align-items: flex-start;
+      gap: 6px;
+      border: none;
+      background: none;
+      border-bottom: 1px solid var(--Dark-20, #2f2f37) !important;
+
+      @include desktopScreen() {
+        padding: 6px 0px;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      span {
+        color: var(--Grey-95, #f2f2f3);
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        @include desktopScreen() {
+          font-size: 18px;
+        }
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

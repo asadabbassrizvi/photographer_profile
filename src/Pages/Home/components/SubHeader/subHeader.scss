@@ -1,0 +1,114 @@
+@import "../../../../mediaquries";
+
+.subHeaderMain {
+  display: flex;
+  padding: 40px 81px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-top: 1px solid var(--Dark-12, #1c1c21);
+  border-bottom: 1px solid var(--Dark-12, #1c1c21);
+  background-image: url("../../images/Vector.png"); /* Replace with the actual URL of your image */
+  background-size: 246px 246px; /* Ensures the background image covers the entire container */
+  background-position: center center; /* Center align both horizontally and vertically */
+  background-repeat: no-repeat;
+  @include desktopScreen() {
+    padding: 80px 162px;
+    background-size: 346px 346px;
+  }
+  @include mobileScreen() {
+    display: block;
+    padding: 40px 16px;
+  }
+}
+.phMes {
+  .btnText {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+  }
+  @include mobileScreen() {
+    margin-top: 20px;
+  }
+}
+.phTitle {
+  color: var(--Grey-40, #62646c);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  @include desktopScreen() {
+    font-size: 22px;
+  }
+  @include mobileScreen() {
+    font-size: 14px;
+  }
+}
+.phName {
+  color: var(--Grey-90, #e4e4e6);
+  font-family: Manrope;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  @include desktopScreen() {
+    font-size: 80px;
+  }
+  @include mobileScreen() {
+    font-size: 40px;
+  }
+}
+
+.phText {
+  color: var(--Absolute-White, #fff);
+  font-family: Manrope;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-right: 1rem;
+  @include desktopScreen() {
+    font-size: 58px;
+  }
+  @include mobileScreen() {
+    font-size: 28px;
+  }
+}
+
+.svgIcon {
+  display: flex;
+  padding: 16px 40px;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 100px;
+  background: var(--Purple-55, #4a2ced);
+  box-shadow: 4px 4px 17.4px 0px rgba(255, 255, 255, 0.28) inset;
+
+  @include mobileScreen() {
+    padding: 14px 30px;
+  }
+  @include desktopScreen() {
+    padding: 18px 50px;
+  }
+
+  svg {
+    height: 24px;
+    width: 24px;
+
+    @include desktopScreen() {
+      width: 30px;
+      height: 30px;
+    }
+    @include mobileScreen() {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

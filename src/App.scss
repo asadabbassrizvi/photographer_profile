@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./Pages/Home/home.scss";
+@import "./Pages/About/about.scss";
+@import "./Pages/Portfolio/components/Portfolio/portfolio.scss";
+@import "./Pages/Services/ServicePage.scss";
+
+$bodyColor: #000;
+
+body {
+  margin: 0;
+  background-color: $bodyColor !important;
+  p {
+    margin: 0;
+  }
+}

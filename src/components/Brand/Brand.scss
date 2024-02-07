@@ -1,0 +1,77 @@
+@import "../../mediaquries";
+@import "../Banner/banner.scss";
+
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  align-self: stretch;
+
+  @include desktopScreen() {
+    gap: 18px;
+  }
+  @include mobileScreen() {
+    margin-top: 100px;
+  }
+
+  span {
+    align-self: stretch;
+    color: var(--Grey-50, #797c86);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+
+    @include desktopScreen() {
+      font-size: 16px;
+    }
+  }
+}
+
+.logo1 {
+  width: 201.143px;
+  height: 40px;
+}
+.logo23C {
+  display: flex;
+  width: 282.857px;
+  height: 40px;
+  padding: 7.143px 8.924px 7.143px 10px;
+  justify-content: center;
+  align-items: center;
+}
+.logo23 {
+  width: 263.933px;
+  height: 25.714px;
+  flex-shrink: 0;
+}
+.logo3 {
+  width: 38.571px;
+  height: 25.714px;
+  flex-shrink: 0;
+}
+.logo2 {
+  width: 213.933px;
+  height: 22.857px;
+  flex-shrink: 0;
+}
+.logo4 {
+  width: 163.404px;
+  height: 40px;
+}
+.logo5 {
+  width: 240.092px;
+  height: 26.309px;
+  flex-shrink: 0;
+}
+.logo6 {
+  width: 147.027px;
+  height: 40px;
+}
+.mr-3 {
+  margin-right: 10px;
+}

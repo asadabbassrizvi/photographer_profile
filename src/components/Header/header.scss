@@ -1,0 +1,193 @@
+@import "../../mediaquries";
+
+.bottomline {
+  border-bottom: 1px solid !important;
+}
+.mainHeader {
+  @include desktopScreen() {
+    display: flex;
+    width: 100%;
+    padding: 0px 125px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  padding: 0px 62px;
+  @include mobileScreen() {
+    padding: 0px 16px;
+  }
+}
+.header {
+  display: flex;
+  padding: 20px 18px;
+  justify-content: space-between;
+  align-self: stretch;
+  // height: 90px;
+  border-right: 1px solid var(--Dark-12, #1c1c21);
+  border-left: 1px solid var(--Dark-12, #1c1c21);
+  @include mobileScreen() {
+    padding: 40px 0px 0px 16px;
+    flex: 1 0 0;
+    height: 108px;
+  }
+  @include desktopScreen() {
+    padding: 30px 40px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  @include mobileScreen() {
+    align-items: end;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-left: 18px;
+  }
+  img {
+    width: 109.267px;
+    height: 22px;
+
+    @include desktopScreen() {
+      width: 134.1px;
+      height: 27px;
+    }
+    @include mobileScreen() {
+      width: 89.4px;
+      height: 18px;
+    }
+  }
+}
+
+.navbarContainer {
+  position: relative;
+  top: 26px;
+  @include desktopScreen() {
+    top: 31px;
+  }
+  .navbar-toggler {
+    @include mobileScreen() {
+    }
+  }
+  nav {
+    @include mobileScreen() {
+    }
+    button {
+      @include mobileScreen() {
+        position: absolute;
+        right: 15px;
+        padding: 20px;
+        top: 41px;
+        border-radius: 20px 0px 0px 0px;
+        border-top: 1px solid var(--Dark-12, #1c1c21);
+        border-left: 1px solid var(--Dark-12, #1c1c21);
+      }
+      span {
+        @include mobileScreen() {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+  @include mobileScreen() {
+    position: absolute;
+    top: 0;
+    z-index: 9999999;
+    background: transparent;
+    width: 100%;
+    right: 0;
+  }
+  .navbar-collapse {
+    border-radius: 12px 12px 0px 0px;
+    border-top: 1px solid var(--Dark-12, #1c1c21);
+    border-right: 1px solid var(--Dark-12, #1c1c21);
+    border-left: 1px solid var(--Dark-12, #1c1c21);
+
+    @include mobileScreen() {
+      position: relative;
+      top: 110px;
+      background-color: #000;
+      border: none;
+    }
+    navbar-nav {
+      @include mobileScreen() {
+        width: 100%;
+      }
+    }
+  }
+
+  a.active {
+    background: var(--Dark-08, #131316);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    @include desktopScreen() {
+      padding: 30px 50px;
+    }
+  }
+  a {
+    display: flex;
+    padding: 24px 40px; /* Adjusted padding values for a web screen */
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    border-right: 1px solid var(--Dark-12, #1c1c21);
+    text-decoration: none;
+    font-family: Manrope;
+    transition: transform 0.3s ease;
+    @include desktopScreen() {
+      padding: 30px 40px;
+    }
+    @include mobileScreen() {
+      border: none;
+    }
+  }
+  a:first-child {
+    border-radius: 12px 0 0 0;
+  }
+  a:last-child {
+    border-radius: 0 12px 0 0;
+  }
+  a:nth-last-child(2) {
+    border-right: none !important;
+  }
+  .hidden {
+    display: none;
+    @include mobileScreen() {
+      display: block;
+    }
+  }
+}
+
+.contactContainer {
+  .border-none {
+    text-decoration: none !important;
+  }
+  button {
+    display: flex;
+    padding: 14px 20px;
+    align-items: center;
+    gap: 10px;
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    border-radius: 8px;
+    border: 1px solid #2f2f37;
+    background: var(--Dark-12, #1c1c21);
+    border-bottom: none;
+    @include desktopScreen() {
+      padding: 16px 24px;
+    }
+  }
+  padding: 14px 0px;
+  @include mobileScreen() {
+    display: none;
+  }
+}
